@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+ body{
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+
+
+}
+
+.earth{
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 300px;
+   height: 300px;
+   background-size: cover;
+   background-repeat: repeat-x;
+   border-radius: 50%;
+   box-shadow: inset 0 0  20px rgba(0,0,0,1), 0 0 50px #4069ff;
+   animation: animateEarth 15s linear infinite;
+   background-image: url(tierra888.jpg);
+
+ }
+
+
+@keyframes animateEarth{
+    0%
+    {
+      background-position:0 0; 
+    }
+   
+    100%{
+     background-position: -750px 0;
+    }
+   
+
+}
+   
+.circle{
+    transform-style: preserve-3d;
+    animation: animateText 10s linear infinite;
+}
+
+
+.circle span{
+    position: absolute ;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color :#35146f;
+    font-size: 3em;
+    transform:center;
+    transform-style: preserve-3d;
+    padding:  5px 11px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 31)))
+    translateZ(200px);
+    border-top:  4px solid #35146f ;
+    border-bottom:  4px solid #35146f ;
+   
+}
+.circle span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateZ(-5px);
+}
+
+@keyframes animateText{
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+    }
+
+    
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+    }
+}
+
+ul{
+    position: relative;
+    /*transform: skewY(-15deg);*/
+
+}
+ul li {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background: #2623259e;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+    top: 50px;
+}
+
+ul li:hover{
+    background: cornflowerblue;
+    transform: translateX(50px);
+}
+ul li ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;;
+    width: 40px;
+    height: 100%;
+    background: #35383e;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+
+}
+
+ul li :hover::before{
+    background: cornflowerblue;
+}
+ul li ::after{
+    content: '';
+    position: absolute;
+    top:-40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+
+}
+
+ul li :hover::after{
+    background: cornflowerblue;
+
+}
+ul li a {
+    text-decoration: none;
+    color: #d1d2d7;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    font-size: 20px;
+
+
+}
+
+ul li:hover a  {
+    color: aliceblue;
+}
+
+ul  li:last-child ::after{
+    box-shadow: -128px 128px 20px rgba(6, 6, 6, 0.25);
+
+
+}
+
+.imagen{
+    width: 40%;
+    float:right;
+    margin: 15%;	
+    display:block;
+}
+
+
+.bob{
+    background-image: url(https://c.tenor.com/V1E1aE_THygAAAAC/stars-space.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* HOME */
+
+ 
+
+h1{
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgb(245, 235, 235);
+}  
+
+.rocket{
+   
+    width: 300px;
+    height: 300px;
+    animation : ani 0.2s ease infinite alternate-reverse;
+}   
+
+@keyframes ani {
+    0% {
+    transform : rotate(0.8deg);
+    
+    }
+    100%{
+    transform : rotate(-0.8deg); 
+    }
+}
+.hi{
+    font-family: 'Manjari', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(254, 250, 250);
+    margin: 0.5rem; 
+}
+
+.ki{
+    font-family: 'Manjari', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    margin: 0.5rem;
+    text-align: center;
+}
+
+
+.inf-rock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    white-space: pre-wrap;
+    word-break: break-all;
+    display: table;
+    align-items: center;
+    font-weight: 500;
+    margin: 0.4rem 1rem 0 1rem;
+    font-size: 0.5rem;   
+}
+
+.inf-rock a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 4rem;
+    font-size: 1rem;
+    padding: 2px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: rgb(4, 245, 185);
+    margin: 1.5rem;
+    box-shadow: 0px 1px 15px 2px rgb(255, 0, 0);
+}
+ .rr{
+    background-image: url(https://mymodernmet.com/wp/wp-content/uploads/2019/10/nasa-black-hole-visualization-1.gif);
+    background-size: cover;
+    
+ }
